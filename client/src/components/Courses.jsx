@@ -29,7 +29,7 @@ const Courses = () => {
       setLoading(true);
 
       const response = await axios.get('/api/courses', { params: { ...filters } });
-
+      
       if (response.statusText !== 'OK') {
         throw new Error('Network response was not ok');
       }
